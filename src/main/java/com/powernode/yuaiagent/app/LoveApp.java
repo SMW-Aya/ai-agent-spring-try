@@ -1,5 +1,7 @@
 package com.powernode.yuaiagent.app;
 
+import com.powernode.yuaiagent.advisor.MyLoggerAdvisor;
+import com.powernode.yuaiagent.advisor.ReReadingAdvisor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
@@ -30,6 +32,9 @@ public class LoveApp {
                 .defaultSystem(SYSTEM_PROMPT)
                 .defaultAdvisors(
                         new MessageChatMemoryAdvisor(chatMemory)
+                        //自定义advisor可按需要开
+                        //         new MyLoggerAdvisor(),
+                        //         new ReReadingAdvisor()
                 )
                 .build();
     }
