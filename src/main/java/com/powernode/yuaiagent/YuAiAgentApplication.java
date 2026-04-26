@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class YuAiAgentApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(YuAiAgentApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(YuAiAgentApplication.class, args);
+    }
 
 }
